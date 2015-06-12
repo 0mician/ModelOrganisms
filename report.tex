@@ -29,8 +29,8 @@
 \tableofcontents
 \newpage
 
-\section*{Part 1: theory}
-\addcontentsline{toc}{section}{Part 1: theory}
+\section*{Part 1: Theory}
+\addcontentsline{toc}{section}{Part 1: Theory}
 
 To unravel the regulatory system(s) involved in ER stress in
 \emph{C. Elegans}, you perform a forward mutagenesis screen to search
@@ -45,17 +45,37 @@ verify that the reporter strain inded reflects the process you are
 interested in?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} In the lab, the worms will not be under stress
+(except if purposefully put in stress conditions). Hence, the
+transgenic worms would not display GFP (or only some basal
+fluorescence). The first thing need you need to do is then to induce
+ER stress to see if GFP is displayed. You also need a negative
+control, so as to rule out the expression of GFP under other types of
+stress (it needs to be specific to ER stress). Once you have verified
+this, you have enough evidence that the GFP is only produced under ER
+stress conditions.
 \bigskip
 
 \noindent\texttt{Q:} How would you proceed with the screen to
 eventually identify new regulators?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} You should start by mutagenizing your transgenic
+worms. For that you can use EMS. You end up with many mutant strains
+which you then need to screen for the specific phenotype you search
+for (ER stress response defect, for example less or more
+fluorescence). You then have a certain number of candidate mutated
+genes that may have an effect on stress response.
 
-\section*{Part 2: practical}
-\addcontentsline{toc}{section}{Part 2: practical} 
+You can then proceed to cross the mutants with an Hawaiian strain of
+clean background, which have SNPs every 1000 bp. You search for the
+SNPs in the offsprings. You should expect to have regions of DNA where
+the SNPs count changes dramatically (drops to 0). You can then
+introduce a WT cross to see if there is a rescue of the functionality
+for those genes.
+
+\section*{Part 2: Practical}
+\addcontentsline{toc}{section}{Part 2: Practical} 
 
 The Snf1/AMPK/SnRK kinases are a well-conserved family of
 AMP-activated kinases in the eukaryotic kingdom where they function as
@@ -64,13 +84,29 @@ energy and metabolic sensors. In the yeast \emph{Saccharomyces
 of a heterotrimeric protein complex with a catalytic $\alpha$-subunit
 and a number of regulatory $\beta$-subunits and a $\gamma$-subunit.
 
+\noindent\underline{Note}: there are 3 names because of naming
+conventions in different model organism. Snf1 is unicellular (yeast),
+SnRK is in plants, AMPK for about any other organism. These are clues
+for the search in the corresponding databases.
+
 \subsection*{Genes}
 \addcontentsline{toc}{subsection}{Genes}
 
 \texttt{Q:} Which genes encode these subunits?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} The information can be found on the SGD website
+in the summary section (the yeast DB has a very strong summary
+section, always start from there).  
+
+The active Snf1p kinase complex is a heterotrimeric complex composed
+of Snf1p, the catalytic (alpha) subunit; Snf4p, a regulatory (gamma)
+subunit; and one of three possible beta subunits (Gal83p, Sip1p, or
+Sip2p) which appear to tether Snf1p and Snf4p together and also may
+determine substrate specificity of the Snf1p kinase complex. The Ps in
+the names refer to proteins, so you can just drop the Ps from the names
+(you can also click on the names and it will open the respective gene
+pages).
 
 \subsection*{Phenotypes}
 \addcontentsline{toc}{subsection}{Phenotypes}
@@ -78,7 +114,13 @@ and a number of regulatory $\beta$-subunits and a $\gamma$-subunit.
 this kinase?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} SGD, phenotype section. The interesting section
+is the classical genetics section, as the results from the other one
+(Large scale survey) may not have been verified. You should then look
+at the NULL mutations, and as you can see there is a long list of
+phenotypes there. They show a common trend in decrease of metabolic
+function, which makes sense given the role of these sensor
+proteins. Stress resistance, and lifespan are also lowered.
 
 \subsection*{Transcription factors}
 \addcontentsline{toc}{subsection}{Transcription factors}
@@ -87,7 +129,13 @@ this kinase?
 under control of this kinase complex in yeast.
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} The Snf1p kinase complex, which phosphorylates
+serine and threonine residues, is essential for regulating the
+transcriptional changes associated with glucose derepression through
+its activation of the transcriptional activators Cat8p and Sip4p, and
+its deactivation of the transcriptional repressor Mig1p. You can
+verify that these are indeed Transcription Factors by going to the
+corresponding gene pages.
 
 \subsection*{Phosphorylation}
 \addcontentsline{toc}{subsection}{Phosphorylation}
@@ -96,6 +144,10 @@ under control of this kinase complex in yeast.
 $\alpha$-subunit of AMPK must be phosphorylated. Find the three upstream
 protein kinases that conduct this phosphorylation in \emph{S. Cerevisae}.
 
+\noindent\texttt{A:} Snf1p is activated by phosphorylation on
+threonine 210 by either Sak1p, Tos3p, or Elm1p. You can verify their
+upstream positions through the individual gene pages.
+
 \subsection*{Deletion mutant(s)}
 \addcontentsline{toc}{subsection}{Deletion mutant(s)}
 
@@ -103,7 +155,25 @@ protein kinases that conduct this phosphorylation in \emph{S. Cerevisae}.
 homologue(s) of the catalytic $\alpha$-subunit in \emph{C. Elegans}?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} You can go through homologene (NCBI) or to the
+wormbase site to find the information, for the latter, search the SNF1
+and then go to the homology tab. You can find 2 genes: aak-1 and
+aak-2. For aak-1, on the phenotype tab (wormbase), you can find one
+deletion mutant (remember RNAi is not a deletion mutant, also make
+sure it is a deletion and not a SNP). But, there are no strains
+available with only aak-1 deleted, so no phenotype can be
+observed. For aak-2, there are more details. You can search the
+genetics tab of the gene to find the deletion mutants. There are 3
+deletion mutants, of which 2 have associated phenotypes (gt33,
+ok524). For gt33, you can see the following phenotypes:
+\begin{itemize}
+\itemsep0em
+\item Frequency body bend reduced
+\item Organism oxidative stress response hypersensitive
+\item Paraquat hypersensitive
+\item Protein phosphorylation reduced
+\item Suppression of head oscillations defective
+\end{itemize} 
 
 \subsection*{Mutant drosophila}
 \addcontentsline{toc}{subsection}{Mutant drosophila}
@@ -112,7 +182,49 @@ homologue(s) of the catalytic $\alpha$-subunit in \emph{C. Elegans}?
 P-element activity. Give the phenotype of one of these mutants.
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} The information can be found in the flybase
+database, querying for AMP kinase in the quick search. The gene is
+AMPK$\alpha$. On the classical alleles (mutagenesis/P-elements), or
+the deletions and duplications tabs, you can see that
+AMPK$\alpha\delta$39 is interesting and is available from stock. It
+has the following phenotypes:
+\begin{itemize}
+\itemsep0em
+\item developmental rate defective (second and third instar larval stage)
+\item lethal (P-stage and third instar larval stage)
+\item small body (second and third instar larval stage)
+\end{itemize} 
+
+\noindent Also, a detailed description is available in the
+corresponding tab: Hemizygous larvae are smaller than wild-type larvae
+from the late second instar onwards, with the defect becoming more
+striking during the third instar. The moult from second to third
+instar is delayed by approximately 12 hours in mutant animals, and the
+third instar is extended by two days compared to controls. Mutant
+animals fail to undergo metamorphosis, dying at the end of the third
+larval instar or shortly after, forming abnormal elongated
+pupae. Whole body triglyceride levels are significantly decreased in
+mutant third instar larvae compared to wild type. Fat body cells are
+smaller than in controls in mutant third instar and wandering
+larvae. However, homozygous clones of cells in the larval fat body are
+equal in size to the surrounding heterozygous cells and starvation has
+no differential effect on cell size within the mutant
+clones. Homozygous third instar larvae have a pronounced brush border
+in the midgut epithelia (as occurs in wild type), but the mutant
+midgut epithelial cells show marked vacuolation. The midgut
+musculature has a ragged appearance in late mutant third instar
+larvae, with both the circular and longitudinal muscles being smaller
+than in controls. The thickness of the hindgut muscle fibres is also
+reduced in the mutant larvae compared to wild type. Mutant third
+instar larvae transferred to dyed food show a similar amount of dyed
+food in their gut as control larvae after 24 hours feeding. However,
+the mutant larvae show a defect in gut clearance, with significant
+amounts of dyed food remaining in their guts even 24 hours after
+removal of the dyed food (most wild-type larvae clear the dyed food
+from their guts within 10 hours). Peristaltic contractions are not
+seen in freshly dissected mutant third larval instar midguts, in
+contrast to the spontaneous muscle contraction seen in the majority of
+wild-type guts.
 
 \subsection*{Zebrafish}
 \addcontentsline{toc}{subsection}{Zebrafish}
@@ -120,10 +232,22 @@ P-element activity. Give the phenotype of one of these mutants.
 \texttt{Q:} What is the name of the gene for the AMPK-$\alpha$1
 catalytic subunit in zebrafish? Where is this gene expressed in the
 14-19 somite embryo and how was this expression visualized? Give a
-morpholino sequence for this gene.
+morpholino sequence for this gene. 
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} the information can be found in the zfin
+database, querying for AMP kinase in the quick search. The gene is
+prkaa1. Go to the expression data (ALL), and there you can see the
+14-19 somite, and by clicking on the figure, you can see that they
+used mRNA in situ hybridization to vizualize the expression.
+
+The morpholino can be found in the Mutants and Targeted Knockdowns
+section of the gene page. MO-prkaa1 is available with the following
+sequence:
+
+\begin{verbatim}
+5' - AATGAAGAGTTGACTTACCAAAATC - 3'
+\end{verbatim}
 
 \subsection*{Other model systems}
 \addcontentsline{toc}{subsection}{Other model systems}
@@ -133,7 +257,14 @@ of AMPK. Which model system would you use to address this challenge,
 and how would you set up the experiments leading to useful results?
 \smallskip
 
-\noindent\texttt{A:} 
+\noindent\texttt{A:} No prefered answer here because it depends on the
+specific problem you want to study. But, you need to be able to argue
+for the model system you select. You could use yeast, create a
+reporter strain (like we did for the c. elegans), and then do a
+mutagenesis. For this type of question you would typically go for a
+lower organism because it is a very basic and well-conserved construct
+(housekeeping). If you go to higher organism, you may do so to study
+tissues, like brain tissues, eyes, ..
 
 \bibliographystyle{plain} \bibliography{bib-db}
 \end{document}
